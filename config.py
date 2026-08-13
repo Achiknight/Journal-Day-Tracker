@@ -1,4 +1,4 @@
-# **// To change colors/fonts of the gui of the Journal //** # 
+# **// To change colors/fonts/Databases of the Journal //** # 
 #  
 #   EXAMPLE FOR CHANGING COLORS
 #
@@ -9,11 +9,11 @@
 
 
 
-background_color = "pink"
+background_color = "#7beefd"
 
-text_color = "purple" 
+text_color = "#852500" 
 
-hover_color = "#ff4666"
+hover_color = "#39b6c4"
 
 border_color = "black"
 
@@ -35,6 +35,12 @@ border_color = "black"
 
 
 
+
+
+# MY SQL DATABASE 
+
+password = ""
+database = ""
 
 
 
