@@ -1,20 +1,22 @@
-from customtkinter import *  
-import time
-
-
-root = CTk()
-root.geometry("1280x720")
-root.title("Journal Every Day")
-root.config(bg="pink")
-entery = CTkLabel("")
-
-
-
+set_appearance_mode("dark")
+from ini_gui import *
+Head_label = CTkLabel(root,
+                      font=('Runethia',40),
+                      fg_color="pink",
+                      text_color="Purple",
+                      text="Journal",
+                      border_color="Black",
+                      border_width=2)
 
 
 
 
-#set_appearance_mode("dark")
+
+
+
+
+
+
 
 
 
