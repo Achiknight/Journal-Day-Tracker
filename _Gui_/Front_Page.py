@@ -5,6 +5,8 @@ import time
 root = CTk()
 root.geometry("1280x720")
 root.title("Journal Every Day")
+root.config(bg="pink")
+entery = CTkLabel("")
 
 
 
@@ -12,7 +14,7 @@ root.title("Journal Every Day")
 
 
 
-
+#set_appearance_mode("dark")
 
 
 
