@@ -12,15 +12,17 @@ if not database_check():
     cursor.execute("CREATE DATABASE JournalPYbyachi;")
 
 cursor.execute("USE DATABASE JournalPYbyachi;")
+data.commit()
 
 Table_name = "Journal_Data"
 
 Tableno = 0
 
 def check_table(Tname):
+    global Tableno
     cur = data.cursor()
     cur.execute("SHOW TABLES")
-    Tableno =len(cur.fetchall)
+    Tableno = len(cur.fetchall)
     for i in cur.fetchall():
         if Tname in i:
             cur.close()
