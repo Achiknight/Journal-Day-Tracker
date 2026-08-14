@@ -11,7 +11,7 @@
 
 background_color = "#7beefd"
 
-text_color = "#852500" 
+text_color = "#a23664" 
 
 hover_color = "#39b6c4"
 
