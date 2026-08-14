@@ -39,9 +39,9 @@ border_color = "black"
 
 # MY SQL DATABASE 
 
-password = ""
-database = ""
-
+passwordn = "Achintya2008"
+hostn = "localhost"
+usern = "root"
 
 
 
