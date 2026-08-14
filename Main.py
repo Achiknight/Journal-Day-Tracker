@@ -1,4 +1,4 @@
-from _Gui_ import Front_Page
+from Journal_py_._Gui_.Pages import Front_Page
 
 
 
