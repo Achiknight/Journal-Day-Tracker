@@ -1,3 +1,6 @@
+## Establishing Mysql Connection 
+
+
 import mysql.connector as msc
 from Journal_py_.config import passwordn,usern,hostn
 

@@ -7,7 +7,8 @@
 ## You can use hex codes inside the strings aswell
 
 
-
+Font_style1 = "Runethia" 
+Font_style2 = "Arial"
 
 background_color = "#7beefd"
 
@@ -86,6 +87,9 @@ fg = background_color
 hv = hover_color
 txt = text_color
 brd = border_color
+Ft1 = Font_style1
+Ft2 = Font_style2
+
 
 ## pallet = {"fg":background_color,'hv':hover_color,"txt":text_color,'brd':border_color}
 ### NOT IN USE CURRENTLY
