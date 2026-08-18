@@ -22,7 +22,8 @@ start = CTkButton(Front_frame,
                   fg_color=fg,
                   hover_color=hv,
                   border_color=brd,
-                  border_width=2
+                  border_width=2,
+                  font=("Formula1 Display Regular",50)
                   )
 
 
@@ -51,6 +52,7 @@ def Place_Front_page():
         anchor = "center"
     )
     return
+
 def Remove_front_page():
     #Head_label.place_forget()
     #start.place_forget()

@@ -4,11 +4,11 @@
 #
 #   Text_color = "<your color name here>"
 
-## You can use hex codes inside the strings aswell
+## You can use hex codes inside the strings 
 
 
 Font_style1 = "Runethia" 
-Font_style2 = "Arial"
+Font_style2 = "Formula1 Display Regular"
 
 background_color = "#7beefd"
 
@@ -16,7 +16,7 @@ text_color = "#a23664"
 
 hover_color = "#39b6c4"
 
-border_color = "black"
+border_color = "#000000"
 
 
 
