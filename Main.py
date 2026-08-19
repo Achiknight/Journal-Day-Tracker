@@ -5,10 +5,21 @@ from _Gui_.Buttons import Reload_butt
 
 Place_Front_page()
 
-Reload_butt.pack()
-Reload_butt.configure(command=lambda:Place_Front_page())
+def reloadwrap():
+    Place_Front_page()
+    Destroy_NJ_1page()
 
-start.configure(command=lambda:Remove_front_page())
+def startwrap():
+    Remove_front_page()
+    Place_NJ_1page()
+    return
+
+Reload_butt.pack()
+Reload_butt.configure(command=lambda:reloadwrap())
+
+
+
+start.configure(command=lambda:startwrap())
 
 
 

@@ -1,1 +1,2 @@
 from _Gui_.Pages.Front_Page import Place_Front_page,Remove_front_page,start
+from _Gui_.Pages.New_Journal_creater_page import Place_NJ_1page,Destroy_NJ_1page
