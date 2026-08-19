@@ -2,7 +2,7 @@
 
 
 from customtkinter import *  
-from Journal_py_.config import fg,hv,txt,brd,Ft1,Ft2
+from config import fg,hv,txt,brd,Ft1,Ft2
 
 root = CTk()
 root.geometry("1280x720")

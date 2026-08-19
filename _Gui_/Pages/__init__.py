@@ -1,1 +1,1 @@
-from Journal_py_._Gui_.Pages.Front_Page import Place_Front_page,Remove_front_page,start
+from _Gui_.Pages.Front_Page import Place_Front_page,Remove_front_page,start

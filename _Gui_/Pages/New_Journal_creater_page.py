@@ -12,7 +12,13 @@ Title = CTkLabel(NewJournal,
                 font=('Runethia',130)
                 )
 
-
+JrName = CTkEntry(
+                  text_color=txt,
+                  fg_color=fg,
+                  border_color=brd,
+                  #border_width=2,
+                  font=("Formula1 Display Regular", 50)
+)
 
 
 

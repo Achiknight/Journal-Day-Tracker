@@ -1,6 +1,6 @@
-from Journal_py_._Gui_.Pages import *
-from Journal_py_._Gui_.ini_gui import *
-from Journal_py_._Gui_.Buttons import Reload_butt
+from _Gui_.Pages import *
+from _Gui_.ini_gui import *
+from _Gui_.Buttons import Reload_butt
 
 
 Place_Front_page()
