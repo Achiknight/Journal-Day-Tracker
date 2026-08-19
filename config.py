@@ -37,12 +37,13 @@ border_color = "#000000"
 
 
 
-
+from passpy import pas,host,use
 # MY SQL DATABASE 
+# Change these passwords
 
-passwordn = "Achintya2008"
-hostn = "localhost"
-usern = "root"
+passwordn = pas
+hostn = host
+usern = use
 
 
 
