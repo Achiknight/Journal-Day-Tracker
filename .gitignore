@@ -1,2 +1,5 @@
 Test.py
 Test1.py
+utility/__pycache__
+Gui/__pycache__
+DBFile/__pycache__/

@@ -1,0 +1,13 @@
+{
+    "customFileOrder.rules": {
+        "Gui": {
+            "order": [
+                "__pycache__",
+                "__init__.py",
+                "GRoot.py",
+                "Front_Page.py",
+                "NameJournal.py"
+            ]
+        }
+    }
+}
