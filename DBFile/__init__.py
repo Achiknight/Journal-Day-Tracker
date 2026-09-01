@@ -1,1 +1,1 @@
-from DBFile.JR_types import keys
+from DBFile.JR_types import journal_types

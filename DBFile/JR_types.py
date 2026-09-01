@@ -56,4 +56,11 @@ money = [
     "Saved"
 ] 
 
-keys = [daily_stats, daily_checkin, college, developer, entertainment, money]
+journal_types = {
+    "daily_stats": daily_stats,
+    "daily_checkin": daily_checkin,
+    "college": college,
+    "developer": developer,
+    "entertainment": entertainment,
+    "money": money
+}
