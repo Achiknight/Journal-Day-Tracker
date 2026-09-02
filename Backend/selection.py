@@ -6,6 +6,7 @@ def selection(item):
         selected.remove(item)
     else:
         selected.append(item)
-        
+    print(selected)
+    return
 
 
