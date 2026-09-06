@@ -44,7 +44,7 @@ for index,category in enumerate(journal_types.keys()):
 
     for types in journal_types[category]:               #* to put selection button inside the catframe               
         Dataframe = CTkCheckBox(catframe,text=types,fg_color=fg,text_color=txt,
-                                                 hover_color=hv,font=(Ft2,20),command=lambda tp=types:selection(tp))
+                                                 hover_color=hv,font=(Ft2,20),command=lambda tp=types:selection(selected,tp))
         Dataframe.pack(anchor="w")
         
         

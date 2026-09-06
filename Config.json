@@ -1,0 +1,60 @@
+{
+  "palettes": {
+    "default": {
+      "Font_style1": "Runethia",
+      "Font_style2": "Formula1 Display Regular",
+      "background_color": "#7beefd",
+      "text_color": "#a23664",
+      "hover_color": "#39b6c4",
+      "border_color": "#000000"
+    },
+    "cyberpunk_glitch": {
+      "Font_style1": "Orbitron",
+      "Font_style2": "VT323",
+      "background_color": "#0d0221",
+      "text_color": "#00f0ff",
+      "hover_color": "#ff007f",
+      "border_color": "#ffe600"
+    },
+    "vintage_editorial": {
+      "Font_style1": "Playfair Display",
+      "Font_style2": "Cormorant Garamond",
+      "background_color": "#f4f1ea",
+      "text_color": "#2b2b2a",
+      "hover_color": "#8c6d46",
+      "border_color": "#d3cbbe"
+    },
+    "synthwave_80s": {
+      "Font_style1": "Press Start 2P",
+      "Font_style2": "Audiowide",
+      "background_color": "#120428",
+      "text_color": "#f72585",
+      "hover_color": "#7209b7",
+      "border_color": "#4cc9f0"
+    },
+    "minimal_swiss": {
+      "Font_style1": "Inter",
+      "Font_style2": "Space Grotesk",
+      "background_color": "#ffffff",
+      "text_color": "#111111",
+      "hover_color": "#e63946",
+      "border_color": "#e5e5e5"
+    },
+    "nordic_frost": {
+      "Font_style1": "Plus Jakarta Sans",
+      "Font_style2": "Sora",
+      "background_color": "#f0f4f8",
+      "text_color": "#102a43",
+      "hover_color": "#334e68",
+      "border_color": "#bcccdc"
+    },
+    "gothic_arcade": {
+      "Font_style1": "UnifrakturMaguntia",
+      "Font_style2": "Silkscreen",
+      "background_color": "#16161a",
+      "text_color": "#fffffe",
+      "hover_color": "#7f5af0",
+      "border_color": "#2cb67d"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 from customtkinter import *
-from DBFile.config import fg,txt,Ft1,Ft2,brd,hv
+from Backend.config import fg,txt,Ft1,Ft2,brd,hv
 
 root = CTk()
 root.title("Day-Tracker/Journal")
