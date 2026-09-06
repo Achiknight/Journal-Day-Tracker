@@ -15,9 +15,12 @@ def plece(frm):                #Frame Open / Close Logic
 
 Track_Sel = CTkScrollableFrame(root,fg_color=fg)
 
+head = LabelHead(root)
+head.configure(text="Select Trackables")
+head.pack()
+
 Row = CTkFrame(Track_Sel,fg_color=fg)
 Row.pack(anchor='w')
-
 
 col = 3
 for index,category in enumerate(journal_types.keys()):
@@ -34,7 +37,7 @@ for index,category in enumerate(journal_types.keys()):
     
     catbutt = Button(storage)                                         #* Adds a button to Category buttons
     catbutt.configure(text=category,command=lambda i=catframe:plece(i))      
-    catbutt.pack(anchor="w",side="top",padx=40,pady=20)
+    catbutt.pack(anchor="w",side="top",padx=40,pady=20)         #? Packed category buttons
     buttsopen[catframe] = 0                                   #* Open / close logic
 
 
