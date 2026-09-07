@@ -2,6 +2,7 @@ from Gui.GRoot import *
 from utility.Wid_Snip import *
 from DBFile import *
 from Backend.selection import selection,selected
+from Gui.settings import Settings
 
 buttsopen = {}
 def plece(frm):                #Frame Open / Close Logic
@@ -15,7 +16,7 @@ def plece(frm):                #Frame Open / Close Logic
 
 Track_Sel = CTkScrollableFrame(root,fg_color=fg)
 
-head = LabelHead(root)
+head = LabelHead(Track_Sel)
 head.configure(text="Select Trackables")
 head.pack()
 
@@ -47,6 +48,10 @@ for index,category in enumerate(journal_types.keys()):
                                                  hover_color=hv,font=(Ft2,20),command=lambda tp=types:selection(selected,tp))
         Dataframe.pack(anchor="w")
         
-        
+    
+placeholder = Button(Track_Sel)
+placeholder.configure(command=lambda:Settings.Create(root))
 def placethis():
+    placeholder.pack()
     Track_Sel.pack(fill="both",anchor="nw",expand = True)
+    

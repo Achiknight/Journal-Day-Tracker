@@ -5,9 +5,12 @@ file = open(r"Config.json","r")
 
 data = json.load(file)
 pallet = data["palettes"]
-default = pallet["default"]
+default = pallet["current"]
 
-
-for keys in default.keys():
-    globals()[var_list[keys]] = default[keys]
+def color_reload():
+    for keys in default.keys():
+        globals()[var_list[keys]] = default[keys]
     
+file.close()
+
+color_reload()
