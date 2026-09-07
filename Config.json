@@ -1,12 +1,12 @@
 {
     "palettes": {
         "current": {
-            "Font_style1": "Orbitron",
-            "Font_style2": "VT323",
-            "background_color": "#0d0221",
-            "text_color": "#00f0ff",
-            "hover_color": "#ff007f",
-            "border_color": "#ffe600"
+            "Font_style1": "Runethia",
+            "Font_style2": "Formula1 Display Regular",
+            "background_color": "#7beefd",
+            "text_color": "#a23664",
+            "hover_color": "#39b6c4",
+            "border_color": "#000000"
         },
         "default": {
             "Font_style1": "Runethia",

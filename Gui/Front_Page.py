@@ -19,3 +19,5 @@ def FrontPage():
 def FrontPageRemove():
     Startbutt.place_forget()
     StartLabel.place_forget()
+    
+

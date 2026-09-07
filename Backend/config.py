@@ -7,10 +7,10 @@ data = json.load(file)
 pallet = data["palettes"]
 default = pallet["current"]
 
-def color_reload():
+def color_var():
     for keys in default.keys():
         globals()[var_list[keys]] = default[keys]
     
 file.close()
 
-color_reload()
+color_var()
