@@ -50,17 +50,12 @@ for index,category in enumerate(journal_types.keys()):
         Dataframe.pack(anchor="w")
 
 
-cenge = Button(Track_Sel)
-cenge.configure(text="Change",command=lambda:color_change("default"))
 
-relo = Button(Track_Sel)
-relo.configure(text="Reload",command=lambda:reload_widget_colors(Track_Sel))
     
 placeholder = Button(Track_Sel)
 placeholder.configure(command=lambda:Settings.Create(root))
 def placethis():
-    cenge.pack()
-    relo.pack()
+
     placeholder.pack()
     Track_Sel.pack(fill="both",anchor="nw",expand = True)
 

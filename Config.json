@@ -1,12 +1,12 @@
 {
     "palettes": {
         "current": {
-            "Font_style1": "Runethia",
-            "Font_style2": "Formula1 Display Regular",
-            "background_color": "#7beefd",
-            "text_color": "#a23664",
-            "hover_color": "#39b6c4",
-            "border_color": "#000000"
+            "Font_style1": "Playfair Display",
+            "Font_style2": "Cormorant Garamond",
+            "background_color": "#f4f1ea",
+            "text_color": "#2b2b2a",
+            "hover_color": "#8c6d46",
+            "border_color": "#d3cbbe"
         },
         "default": {
             "Font_style1": "Runethia",
