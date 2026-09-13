@@ -6,6 +6,10 @@ import json
 
 created = False
 
+def reload_fr(key,rot):
+    color_change(key)
+    reload_widget_colors(rot)
+
 class Settings():
     
     def Pall_data():
@@ -27,7 +31,9 @@ class Settings():
             cur = data[key]
             Block = CTkFrame(Row, fg_color=fg, width=200, height=100)
             Block.pack(side='left',padx=(0,20))
-            
+            change = Button(Block,command=lambda i=key,e=root: reload_fr(i,e))
+            change.configure(text="Change")
+            change.pack()
             
             pal_name = LabelBody(Block)
             pal_name.pack()
