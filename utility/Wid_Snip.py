@@ -1,6 +1,6 @@
 from Gui.GRoot import *
 
-def Button(master):
+def Button(master, **kwargs):
     k = CTkButton(master,
                   text="Click me",
                   text_color=txt,
@@ -8,30 +8,37 @@ def Button(master):
                   hover_color=hv,
                   border_color=brd,
                   border_width=2,
-                  font=(Ft2, 50))
+                  font=(Ft2, 50),
+                  **kwargs)
     return k
 
-def LabelHead(master):
+
+def LabelHead(master, **kwargs):
     k = CTkLabel(master,
                  text="Click me",
                  text_color=txt,
                  fg_color=fg,
-                 font=(Ft1, 130))
+                 font=(Ft1, 130),
+                 **kwargs)
     return k
 
-def LabelBody(master):
+
+def LabelBody(master, **kwargs):
     k = CTkLabel(master,
                  text="Click me",
                  text_color=txt,
                  fg_color=fg,
-                 font=(Ft2, 30))
-    return k 
+                 font=(Ft2, 30),
+                 **kwargs)
+    return k
 
-def Entery(master):
+
+def Entery(master, **kwargs):
     k = CTkEntry(master,
                  text_color=txt,
                  fg_color=fg,
                  border_color=brd,
                  border_width=2,
-                 font=(Ft2, 30))
+                 font=(Ft2, 30),
+                 **kwargs)
     return k

@@ -18,24 +18,26 @@ class Settings():
     def Pallet(Frame):
         ipr = 2
         Row = CTkFrame(Frame,fg_color=fg)
-        Row.pack()
+        Row.pack(fill="x")
         data = Settings.Pall_data()
         for index,key in enumerate(data.keys()):
-            if index == 0:
-                pass
-            if index % ipr == 0:
+            if index % ipr == 0 and index != 0:
                 Row = CTkFrame(Frame,fg_color=fg)
-                Row.pack()
+                Row.pack(fill="x")
             cur = data[key]
-            Block = CTkFrame(Row,fg_color=fg)
-            Block.pack(side='left')
+            Block = CTkFrame(Row, fg_color=fg, width=200, height=100)
+            Block.pack(side='left',padx=(0,20))
+            
+            
+            pal_name = LabelBody(Block)
+            pal_name.pack()
+            pal_name.configure(text=key)
             for keys in cur.keys():
                 if keys == "Font_style1" or keys == "Font_style2":
                     continue
                 CTkLabel(Block,text=keys,text_color=cur[keys]).pack()
-            print(index)  
-            
-        
+
+
 
 
     def Create(master):
@@ -50,14 +52,13 @@ class Settings():
         Head.pack()
         
         
-        Settings.Pallet(setts)
         
-        cenge = Button(setts)
-        cenge.configure(text="Change",command=lambda:color_change("vintage_editorial"))
+        # cenge = Button(setts)
+        # cenge.configure(text="Change",command=lambda:color_change("vintage_editorial"))
 
 
-        relo = Button(setts)
-        relo.configure(text="Reload",command=lambda:reload_widget_colors(root))
+        # relo = Button(setts)
+        # relo.configure(text="Reload",command=lambda:reload_widget_colors(root))
         created = True
         frm = CTkScrollableFrame(setts,fg_color=fg)
         frm.pack(fill="both",expand=True)
