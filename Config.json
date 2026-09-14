@@ -1,12 +1,12 @@
 {
     "palettes": {
         "current": {
-            "Font_style1": "Inter",
-            "Font_style2": "Space Grotesk",
-            "background_color": "#ffffff",
-            "text_color": "#111111",
-            "hover_color": "#e63946",
-            "border_color": "#e5e5e5"
+            "Font_style1": "Runethia",
+            "Font_style2": "Formula1 Display Regular",
+            "background_color": "#7beefd",
+            "text_color": "#a23664",
+            "hover_color": "#39b6c4",
+            "border_color": "#000000"
         },
         "default": {
             "Font_style1": "Runethia",
@@ -63,6 +63,94 @@
             "text_color": "#fffffe",
             "hover_color": "#7f5af0",
             "border_color": "#2cb67d"
+        },
+        "midnight_terminal": {
+            "Font_style1": "JetBrains Mono",
+            "Font_style2": "IBM Plex Mono",
+            "background_color": "#0b0f0c",
+            "text_color": "#39ff14",
+            "hover_color": "#1f8f3a",
+            "border_color": "#244d2b"
+        },
+        "ocean_depth": {
+            "Font_style1": "Montserrat",
+            "Font_style2": "Nunito Sans",
+            "background_color": "#061826",
+            "text_color": "#8be9fd",
+            "hover_color": "#087e8b",
+            "border_color": "#155e75"
+        },
+        "sunset_warm": {
+            "Font_style1": "Poppins",
+            "Font_style2": "Lora",
+            "background_color": "#fff1e6",
+            "text_color": "#5c2a2a",
+            "hover_color": "#e76f51",
+            "border_color": "#f4a261"
+        },
+        "forest_moss": {
+            "Font_style1": "DM Sans",
+            "Font_style2": "Merriweather",
+            "background_color": "#101c16",
+            "text_color": "#d8f3dc",
+            "hover_color": "#40916c",
+            "border_color": "#2d6a4f"
+        },
+        "cherry_bomb": {
+            "Font_style1": "Bebas Neue",
+            "Font_style2": "Roboto Slab",
+            "background_color": "#24000f",
+            "text_color": "#ffccd5",
+            "hover_color": "#c9184a",
+            "border_color": "#800f2f"
+        },
+        "terminal_amber": {
+            "Font_style1": "Share Tech Mono",
+            "Font_style2": "Courier New",
+            "background_color": "#100e08",
+            "text_color": "#ffb000",
+            "hover_color": "#c47f00",
+            "border_color": "#594000"
+        },
+        "lavender_dream": {
+            "Font_style1": "Quicksand",
+            "Font_style2": "Comfortaa",
+            "background_color": "#f5f0ff",
+            "text_color": "#3c315b",
+            "hover_color": "#8e7dbe",
+            "border_color": "#d6ccef"
+        },
+        "industrial": {
+            "Font_style1": "Oswald",
+            "Font_style2": "Roboto Condensed",
+            "background_color": "#202124",
+            "text_color": "#e8eaed",
+            "hover_color": "#f9ab00",
+            "border_color": "#5f6368"
+        },
+        "matrix": {
+            "Font_style1": "Share Tech Mono",
+            "Font_style2": "VT323",
+            "background_color": "#000000",
+            "text_color": "#00ff41",
+            "hover_color": "#008f11",
+            "border_color": "#003b00"
+        },
+        "royal_dark": {
+            "Font_style1": "Cinzel",
+            "Font_style2": "Libre Baskerville",
+            "background_color": "#100820",
+            "text_color": "#f5d76e",
+            "hover_color": "#7b2cbf",
+            "border_color": "#4a306d"
+        },
+        "paper_ink": {
+            "Font_style1": "Libre Baskerville",
+            "Font_style2": "Source Serif 4",
+            "background_color": "#f7f3e9",
+            "text_color": "#292522",
+            "hover_color": "#9b2226",
+            "border_color": "#d6cdbb"
         }
     }
 }

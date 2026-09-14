@@ -15,27 +15,34 @@ def color_change(chosen):
     file.close()
     config.color_var()
     
-def reload_widget_colors(widget):
-    try:
-        widget.configure(fg_color=config.fg)
-    except:
-        pass
+def reload_widget_colors(widget,skip):
+    if widget.winfo_toplevel() == skip:
+        try:
+            widget.configure(fg_color=config.fg)
+        except:
+            pass
 
-    try:
-        widget.configure(text_color=config.txt)
-    except:
-        pass
+    else:
+        try:
+            widget.configure(fg_color=config.fg)
+        except:
+            pass
 
-    try:
-        widget.configure(hover_color=config.hv)
-    except:
-        pass
+        try:
+            widget.configure(text_color=config.txt)
+        except:
+            pass
 
-    try:
-        widget.configure(border_color=config.brd)
-    except:
-        pass
+        try:
+            widget.configure(hover_color=config.hv)
+        except:
+            pass
+
+        try:
+            widget.configure(border_color=config.brd)
+        except:
+            pass
 
     for child in widget.winfo_children():
-        reload_widget_colors(child)
+        reload_widget_colors(child,skip)
                 
