@@ -54,8 +54,8 @@ for index,category in enumerate(journal_types.keys()):
     
 placeholder = Button(Track_Sel)
 placeholder.configure(command=lambda:Settings.Create(root))
-def placethis():
+def place_Track_sel():
+    Track_Sel.place(relx = 0,rely = 0, relheight = 1, relwidth = 1)
 
-    placeholder.pack()
-    Track_Sel.pack(fill="both",anchor="nw",expand = True)
-
+def forget_Track_sel():
+    Track_Sel.place_forget()

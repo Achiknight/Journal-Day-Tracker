@@ -18,6 +18,10 @@ def color_change(chosen):
 def reload_widget_colors(widget,skip):
     if widget.winfo_toplevel() == skip:
         try:
+            widget.configure(hover_color=config.hv)
+        except:
+            pass
+        try:
             widget.configure(fg_color=config.fg)
         except:
             pass
