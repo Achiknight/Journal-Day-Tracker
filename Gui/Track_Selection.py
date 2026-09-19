@@ -50,8 +50,11 @@ for index,category in enumerate(journal_types.keys()):
         Dataframe.pack(anchor="w")
 
 
+#! Testing purpose button
+# set = Button(Track_Sel)
+# set.configure(command=lambda:Settings.Create(root))
+# set.pack()
 
-    
 placeholder = Button(Track_Sel)
 placeholder.configure(command=lambda:Settings.Create(root))
 def place_Track_sel():

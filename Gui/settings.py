@@ -6,6 +6,8 @@ import json
 idt = None
 created = False
 
+dropped = False
+
 def reload_fr(key,rot,skip):
     color_change(key)
     reload_widget_colors(rot,skip)
@@ -13,6 +15,21 @@ def reload_fr(key,rot,skip):
   
 
 class Settings():
+    # def __init__(self):
+        
+    
+    def drop_setts(frm):
+        global dropped
+        
+        if not dropped:
+            frm.pack()
+            dropped = True
+        
+        elif dropped:
+            frm.pack_forget()
+            dropped = False
+            
+        
 
     def Root():
         setts = CTkToplevel(root)
@@ -30,11 +47,16 @@ class Settings():
     def Pallet(Frame):
         ipr = 2
 
+        
         data = Settings.Pall_data()
         for index,key in enumerate(data.keys()):
+            
             if index % ipr == 0:
                 Row = CTkFrame(Frame,fg_color=fg)
                 Row.pack(fill="x")
+            if key == "current":
+                continue
+            
             cur = data[key]
             Block = CTkFrame(Row, fg_color=fg, width=200, height=100)
             Block.pack(side='left',padx=(0,20))
@@ -71,7 +93,16 @@ class Settings():
         frm = CTkScrollableFrame(setts,fg_color=fg)
         frm.pack(fill="both",expand=True)
         idt.protocol("WM_DELETE_WINDOW", Settings.close_settings)
-        Settings.Pallet(frm)
+
+        changer_frame = CTkFrame(frm,fg_color=fg)
+        # changer_frame.pack(fill="both",expand=True)
+        
+
+        Settings.Pallet(changer_frame)
+        
+        show = Button(frm)
+        show.configure(command=lambda:Settings.drop_setts(changer_frame))
+        show.pack()
 
     def close_settings():
         global created
