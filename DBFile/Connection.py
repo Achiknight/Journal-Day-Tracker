@@ -1,8 +1,8 @@
-import sqlite3
+import sqlite3 as sq3
 import mysql.connector as msc
 
 def sql3():
-    data = sqlite3.connect("Journal.db")
+    data = sq3.connect("Journal.db")
     cur = data.cursor()
     return data,cur
 
@@ -17,4 +17,4 @@ def Mysql(Host,User,Pass,Database):
         cur = data.cursor()
         return data,cur,True
     except:
-        return False,False,False    
+        return False,False,False        
