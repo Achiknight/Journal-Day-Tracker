@@ -7,11 +7,14 @@ def sql3():
     return data,cur
 
 def Mysql(Host,User,Pass,Database):
-    data = msc.connect(
-        localhost=Host,
-        user = User,
-        password = Pass,
-        database = Database
-    )
-    cur = data.cursor()
-    return data,cur
+    try:    
+        data = msc.connect(
+            localhost=Host,
+            user = User,
+            password = Pass,
+            database = Database
+        )
+        cur = data.cursor()
+        return data,cur,True
+    except:
+        return False,False,False    
