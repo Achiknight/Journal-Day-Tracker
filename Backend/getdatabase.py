@@ -1,5 +1,7 @@
 from DBFile.Connection import Mysql,sql3
 
+
+
 data = None
 cur = None
 
@@ -12,3 +14,5 @@ def mysqlconnectior(host,user,Pass,Database):
     con = None
     data,cur,con = Mysql(host,user,Pass,Database)
     return con
+
+db_choice = {"sql3":sqllite3,"mysql":mysqlconnectior}

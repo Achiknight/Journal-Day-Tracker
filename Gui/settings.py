@@ -6,7 +6,7 @@ import json
 idt = None
 created = False
 
-dropped = False
+dropped = {}
 
 def reload_fr(key,rot,skip):
     color_change(key)
@@ -21,13 +21,13 @@ class Settings():
     def drop_setts(frm):
         global dropped
         
-        if not dropped:
+        if dropped[frm] == 0:
             frm.pack()
-            dropped = True
+            dropped[frm] = 1
         
-        elif dropped:
+        elif dropped[frm] == 1:
             frm.pack_forget()
-            dropped = False
+            dropped[frm] = 0
             
         
 
@@ -96,17 +96,30 @@ class Settings():
 
         changer_frame = CTkFrame(frm,fg_color=fg)
         # changer_frame.pack(fill="both",expand=True)
-        
+        dropped[changer_frame] = 0
 
+        db_change_frame = CTkFrame(frm,fg_color=fg)
+        dropped[db_change_frame] = 0
+    
+        
         Settings.Pallet(changer_frame)
+        Settings.set_database(db_change_frame)
         
         show = Button(frm)
         show.configure(command=lambda:Settings.drop_setts(changer_frame))
         show.pack()
+        
+        
+        
+        how = Button(frm)
+        how.configure(command=lambda:Settings.drop_setts(db_change_frame))
+        how.pack()
 
     def close_settings():
         global created
         created = False
         idt.destroy()
 
-    
+    def set_database(frm):
+        Rad1 = CTkRadioButton(frm,fg_color=fg,text="Sql3",text_color=txt,)
+        Rad1.pack()

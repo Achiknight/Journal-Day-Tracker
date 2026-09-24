@@ -2,6 +2,7 @@ from Gui.GRoot import *
 from utility.Wid_Snip import *
 from Backend.Backpage_ import cur,rev
 
+
 NameJournal = CTkFrame(root,fg_color=fg)
 
 header = LabelHead(NameJournal)
