@@ -32,10 +32,10 @@ JrNamelabel.place(relx = 0.25,rely = 0.7, relheight = 0.2, relwidth = 0.26,ancho
 def Place_NameJournal():
     global cur,rev
     NameJournal.place(relx = 0,rely =0, relheight = 1, relwidth = 1)
-    cur = Place_NameJournal()
+    cur = Place_NameJournal
     
     
 def Forget_NameJournal():
     global cur,rev
     NameJournal.place_forget()
-    rev = Place_NameJournal()
+    rev = Place_NameJournal
