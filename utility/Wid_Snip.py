@@ -2,7 +2,6 @@ from Gui.GRoot import *
 
 def Button(master, **kwargs):
     k = CTkButton(master,
-                  text="Click me",
                   text_color=txt,
                   fg_color=fg,
                   hover_color=hv,
@@ -15,7 +14,6 @@ def Button(master, **kwargs):
 
 def LabelHead(master, **kwargs):
     k = CTkLabel(master,
-                 text="Click me",
                  text_color=txt,
                  fg_color=fg,
                  font=(Ft1, 130),
@@ -25,7 +23,6 @@ def LabelHead(master, **kwargs):
 
 def LabelBody(master, **kwargs):
     k = CTkLabel(master,
-                 text="Click me",
                  text_color=txt,
                  fg_color=fg,
                  font=(Ft2, 30),
