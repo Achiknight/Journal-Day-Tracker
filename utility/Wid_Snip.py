@@ -1,4 +1,4 @@
-from Gui.GRoot import *
+from Gui.GUI_Root import *
 
 def Button(master, **kwargs):
     k = CTkButton(master,

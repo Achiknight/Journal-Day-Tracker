@@ -1,4 +1,4 @@
-from Gui.GRoot import *
+from Gui.GUI_Root import *
 from utility.Wid_Snip import *
 from Backend.Pallet_Change import color_change,reload_widget_colors
 import json

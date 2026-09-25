@@ -1,4 +1,4 @@
-from Gui.GRoot import *
+from Gui.GUI_Root import *
 from utility.Wid_Snip import *
 from DBFile import *
 from Backend.selection import selection,selected
