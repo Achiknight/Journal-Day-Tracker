@@ -1,4 +1,9 @@
 {
+    "USER":{
+        "Name":"",
+        "PIN" :""
+    },
+
     "dbchoice":{
         "choice":"",
         "login":{
