@@ -3,28 +3,30 @@ from utility.Wid_Snip import *
 from Backend.Backpage_ import cur,rev
 from Backend.Page_Wraper import wrappers
 
-
-frame = CTkFrame(root,fg_color=fg)
-
-
-StartLabel = LabelHead(frame,text="Journal")
-
-
-Startbutt = Button(frame)
-Startbutt.configure(text="Create New Journal")
-
-
-Startbutt.place(relx = 0.5,rely =0.4, relheight = 0.1, relwidth = 0.4,anchor="center")
-StartLabel.place(relx = 0.5,rely = 0.2, relheight = 0.4, relwidth = 0.6,anchor="center")
-
-Startbutt.configure(font=(Ft2,30),command=lambda:wrappers.new_journal())
-
-def Place_FrontPage():
-    global cur,rev
-    frame.place(relx = 0,rely =0, relheight = 1, relwidth = 1)
+class FrontPage(CTkFrame):
+    def __init__(self,master):
+        super().__init__(
+            master,
+            fg_color=fg
+        )
+    
+    def widegets(self):
+        self.StartLabel = LabelHead(self,text="Journal")
 
 
-def Forget_FrontPage():
-    global cur,rev
-    frame.place_forget()
+        self.Startbutt = Button(self)
+        self.Startbutt.configure(text="Create New Journal")
 
+
+        self.Startbutt.place(relx = 0.5,rely =0.4, relheight = 0.1, relwidth = 0.4,anchor="center")
+        self.StartLabel.place(relx = 0.5,rely = 0.2, relheight = 0.4, relwidth = 0.6,anchor="center")
+
+        self.Startbutt.configure(font=(Ft2,30),command=lambda:wrappers.new_journal())
+        
+    #* #############################################################
+    
+    def Place(self):
+        self.place(relx = 0,rely =0, relheight = 1, relwidth = 1)
+    
+    def Forget(self):
+        self.place_forget()
