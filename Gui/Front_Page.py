@@ -1,4 +1,3 @@
-from Gui.GUI_Root import root
 from utility.Wid_Snip import *
 from Backend.Backpage_ import cur,rev
 from Backend.Page_Wraper import wrappers
@@ -9,6 +8,7 @@ class FrontPage(CTkFrame):
             master,
             fg_color=fg
         )
+        self.widegets()
     
     def widegets(self):
         self.StartLabel = LabelHead(self,text="Journal")
@@ -25,8 +25,8 @@ class FrontPage(CTkFrame):
         
     #* #############################################################
     
-    def Place(self):
+    def place(self):
         self.place(relx = 0,rely =0, relheight = 1, relwidth = 1)
     
-    def Forget(self):
+    def forget(self):
         self.place_forget()

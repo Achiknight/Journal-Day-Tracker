@@ -7,11 +7,12 @@ class MainWindow():
         self.root.geometry("1280x720")
         self.root.config(background=fg)
         
-    def Update(self):
-        self.root.mainloop
         
-    def Destroy(self):
-        self.root.protocol("WM_DELETE_WINDOW", MainWindow.Close)
+    def update(self):
+        self.root.mainloop()
+        
+    def setup_protocol(self):
+        self.root.protocol("WM_DELETE_WINDOW", self.close)
     
-    def Close(self):
+    def close(self):
         self.root.destroy()

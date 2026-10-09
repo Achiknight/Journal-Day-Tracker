@@ -5,14 +5,13 @@ def color_var():           #!
 
     data = json.load(file)
     pallet = data["palettes"]
-    default = pallet["current"]
+    current = pallet["current"]
         
     file.close()
 
 
-    for keys in default.keys():
-        globals()[var_list[keys]] = default[keys]
-        print(default[keys])
+    for keys in current.keys():
+        globals()[var_list[keys]] = current[keys]
 
 
 color_var()

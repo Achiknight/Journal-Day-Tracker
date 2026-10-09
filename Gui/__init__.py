@@ -1,4 +1,5 @@
-from Gui.GUI_Root import *
-from Gui.Front_Page import Place_FrontPage,Forget_FrontPage
-from Gui.NameJournal import Place_NameJournal,Forget_NameJournal
-from Gui.Track_Selection import place_Track_sel,forget_Track_sel
+from Gui.GUI_Root import MainWindow
+from Gui.Front_Page import FrontPage
+# from NameJournal import NewJournalP1
+# from Track_Selection import NewJournalP2
+# from entry_page import EntryPage
