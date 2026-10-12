@@ -80,7 +80,7 @@ class NewJournalP2(CTkScrollableFrame):
             self.place_forget()
 
     def wrapper(self):
-        EntryPage.widgets(EntryPage,self.selected)
+        self.app.pages["entry_page"].widgets(self.selected)  #* GURU JI JAB WEEKEND ME AOOGE TO YE SAMJHA DENA PLS
         self.app.show_page("entry_page")
 
 
