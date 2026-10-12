@@ -1,12 +1,11 @@
-
+from Gui import *
 
 class wrappers():
     def new_journal():
-        from Gui.Front_Page import FrontPage
-        from Gui.NameJournal import Place_NameJournal
+
         
-        FrontPage.Forget()
-        Place_NameJournal()
+        FrontPage.forget()
+        NewJournalP1.place()
         
     def new_journal_selection():
         from Gui.NameJournal import Forget_NameJournal

@@ -2,15 +2,18 @@ from customtkinter import *
 from utility.Wid_Snip import *
 from Gui.widgets import Journal_Widgets
 
-class_entry = {}
+
 
 
 class EntryPage(CTkScrollableFrame):
-    def __init__(self,master):
+    def __init__(self,master,app):
+            self.class_entry = {}
             super().__init__(
                 master,
                 fg_color=fg
+                
             )
+            self.app = app
             
     def widgets(self, selection :list):
         for index,function in enumerate(selection):
@@ -23,4 +26,13 @@ class EntryPage(CTkScrollableFrame):
             
             k = Journal_Widgets.FIELD_BUILDERS[function](rowbox)
             
-            class_entry[function] = k
+            self.class_entry[function] = k
+        
+        next_button = Button(self,text="Next",command=NONE)
+    
+    def place_(self):
+        self.place(relx = 0,rely =0, relheight = 1, relwidth = 1)
+        
+    def forget(self):
+        self.place_forget()
+        

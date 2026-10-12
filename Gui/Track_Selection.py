@@ -1,39 +1,46 @@
-from Gui.GUI_Root import *
-from utility.Wid_Snip import *
-from DBFile import *
-
-from Gui.settings import Settings
-from Backend.Pallet_Change import color_change,reload_widget_colors
-
-buttsopen = {}
-def plece(frm):                #Frame Open / Close Logic
-    if buttsopen[frm] == 1:
-        buttsopen[frm] = 0
-        frm.pack_forget()
-    elif buttsopen[frm] == 0:
-        frm.pack(anchor='n',side="top")
-        buttsopen[frm] = 1
-selected = []
-
-def selection(selected,item):
-    if item in selected:
-        selected.remove(item)
-    else:
-        selected.append(item)
-    print(selected)
-    return
+from customtkinter import *
+from utility.Wid_Snip import Entery,LabelBody,LabelHead,Button
+from DBFile.JR_types import journal_types
+from Backend.config import fg,txt,Ft1,Ft2,brd,hv
+from Gui.entry_page import EntryPage
 
  
 class NewJournalP2(CTkScrollableFrame):
-    def ___init__(self,master):
+   
+    def __init__(self,master,app):
         super().__init__(
             master,
-            fg_color =fg            
+            fg_color=fg            
         )
+        self.app = app
+        self.buttsopen = {}
+        self.selected = []
+        self.widgets()
+    
+    
+    def plece(self,frm):      #Frame Open / Close Logic
+        if self.buttsopen[frm] == 1:
+            self.buttsopen[frm] = 0
+            frm.pack_forget()
+        elif self.buttsopen[frm] == 0:
+            frm.pack(anchor='n',side="top")
+            self.buttsopen[frm] = 1
+            return
+
+    def selection(self,selected,item):
+        if item in selected:
+            selected.remove(item)
+        else:
+            selected.append(item)
+        print(selected)
+        return
+
+        
+        
     def widgets(self):        
-        self.head = LabelHead(self)
-        self.head.configure(text="Select Trackables")
-        self.head.pack()
+        head = LabelHead(self)
+        head.configure(text="Select Trackables")
+        head.pack()
 
         Row = CTkFrame(self,fg_color=fg)
         Row.pack(anchor='w')
@@ -52,23 +59,55 @@ class NewJournalP2(CTkScrollableFrame):
             catframe = CTkFrame(storage,fg_color=fg)                      #* Adds a frame for checkboxes"
             
             catbutt = Button(storage)                                         #* Adds a button to Category buttons
-            catbutt.configure(text=category,command=lambda i=catframe:plece(i))      
+            catbutt.configure(text=category,command=lambda i=catframe:self.plece(i))      
             catbutt.pack(anchor="w",side="top",padx=40,pady=20)         #? Packed category buttons
-            buttsopen[catframe] = 0                                   #* Open / close logic
+            self.buttsopen[catframe] = 0                                   #* Open / close logic
 
 
 
-            for types in self.journal_types[category]:               #* to put selection button inside the catframe               
+            for types in journal_types[category]:               #* to put selection button inside the catframe               
                 Dataframe = CTkCheckBox(catframe,text=types,fg_color=fg,text_color=txt,
-                                                hover_color =hv,font=(Ft2,20),command=lambda tp=types:selection(selected,tp))
+                                                hover_color =hv,font=(Ft2,20),command=lambda tp=types:self.selection(self.selected,tp))
                 Dataframe.pack(anchor="w")
+            
+        nextbutton = Button(self,text = "Next",command=lambda:self.wrapper())
+        nextbutton.pack()
                 
-                
-        def Place(self):
+    def place_(self):
             self.place(relx = 0,rely = 0, relheight = 1, relwidth = 1)
 
-        def Forget(self):
+    def forget(self):
             self.place_forget()
+
+    def wrapper(self):
+        EntryPage.widgets(EntryPage,self.selected)
+        self.app.show_page("entry_page")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # #! Testing purpose button
