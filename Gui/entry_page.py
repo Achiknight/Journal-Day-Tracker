@@ -19,9 +19,9 @@ class EntryPage(CTkScrollableFrame):
         for index,function in enumerate(selection):
             if index % 2 == 0:
                 Row = CTkFrame(self,fg_color=fg)
-                Row.pack()
+                Row.pack(anchor='w',pady=40)
             
-            rowbox = CTkFrame(self,fg_color=fg)
+            rowbox = CTkFrame(Row,fg_color=fg)
             rowbox.pack(side="left",pady=40,padx=20,anchor="nw")
             
             k = Journal_Widgets.FIELD_BUILDERS[function](rowbox)
@@ -31,7 +31,7 @@ class EntryPage(CTkScrollableFrame):
         next_button = Button(self,text="Next",command=NONE)
     
     def place_(self):
-        self.place(relx = 0,rely =0, relheight = 1, relwidth = 1)
+        self.place(relx = 0,rely = 0, relheight = 1, relwidth = 1)
         
     def forget(self):
         self.place_forget()
