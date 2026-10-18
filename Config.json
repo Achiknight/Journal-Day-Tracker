@@ -5,7 +5,7 @@
     },
 
     "dbchoice":{
-        "choice":"",
+        "choice":"sql3",
         "login":{
             "saved":"True",
             "info" :{

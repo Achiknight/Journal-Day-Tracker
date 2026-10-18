@@ -1,7 +1,8 @@
-from Gui.GUI_Root import *
 from utility.Wid_Snip import *
 from Backend.Backpage_ import cur,rev
 from Backend.Page_Wraper import wrappers
+from DBFile.Connection import data,cur
+from DBFile.table_maker import Table
  
 class NewJournalP1(CTkFrame):
     def __init__(self,master,app):
@@ -16,24 +17,24 @@ class NewJournalP1(CTkFrame):
 
         header = LabelHead(self,text="New Journal")
 
-        Name = Entery(self)
-        Name.configure(placeholder_text="Changes if already enterd once")
+        self.Name = Entery(self)
+        self.Name.configure(placeholder_text="Changes if already enterd once")
         Namelabel = LabelBody(self)
         Namelabel.configure(text="Your Name")
 
-        JrName = Entery(self)
+        self.JrName = Entery(self)
         JrNamelabel = LabelBody(self)
         JrNamelabel.configure(text="Journal Name")
 
         nextbtn = Button(self, text="To Selectables")
-        nextbtn.configure(command=lambda: self.app.show_page("New_page2"))  #! Button CMD
+        nextbtn.configure(command=lambda:self.wrapper())  #! Button CMD
 
         header.place(relx=0.5, rely=0.2, relheight=0.3, relwidth=0.6, anchor="center")
 
-        Name.place(relx=0.6, rely=0.4, relheight=0.2, relwidth=0.41, anchor="center")
+        self.Name.place(relx=0.6, rely=0.4, relheight=0.2, relwidth=0.41, anchor="center")
         Namelabel.place(relx=0.25, rely=0.4, relheight=0.1, relwidth=0.28, anchor="center")
         
-        JrName.place(relx=0.6, rely=0.7, relheight=0.2, relwidth=0.4, anchor="center")
+        self.JrName.place(relx=0.6, rely=0.7, relheight=0.2, relwidth=0.4, anchor="center")
         JrNamelabel.place(relx=0.25, rely=0.7, relheight=0.2, relwidth=0.26, anchor="center")
 
         nextbtn.place(relx=0.5, rely=0.8, relheight=0.2, relwidth=0.26, anchor="center")
@@ -44,4 +45,8 @@ class NewJournalP1(CTkFrame):
             
     def forget(self):
         self.place_forget()
+        
+    def wrapper(self):
+        self.app.show_page("New_page2")
+        Table.create(self.JrName.get(),cur,data)
         

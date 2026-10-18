@@ -1,4 +1,20 @@
 
+
+class Table():
+    def create(name,cur=None,data=None):
+        if not cur or not data:
+            return
+        try:
+            cur.execute(f"""CREATE TABLE journal_{name}
+                    (Date DATE DEFAULT (CURRENT_DATE) Primary Key);""")
+            data.commit()
+            print("created")
+        except Exception as e:
+            print("did not work")
+            print(e)
+
+
+
 class qurreys():
     def create_row_sleep(cur, data, journal_name):
         cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "sleep" TEXT')
@@ -41,19 +57,19 @@ class qurreys():
         data.commit()
 
     def create_row_mood(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "mood" INTEGER')
+        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "mood" INT')
         data.commit()
 
     def create_row_energy(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "energy" INTEGER')
+        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "energy" INT')
         data.commit()
 
     def create_row_stress(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "stress" INTEGER')
+        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "stress" INT')
         data.commit()
 
     def create_row_productivity(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "productivity" INTEGER')
+        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "productivity" INT')
         data.commit()
 
     def create_row_weather(cur, data, journal_name):
