@@ -9,12 +9,16 @@ def sql3():
 def Mysql(Host,User,Pass,Database):
     try:    
         data = msc.connect(
-            localhost=Host,
+            host =Host,
             user = User,
             password = Pass,
             database = Database
         )
         cur = data.cursor()
+        print("connected")
         return data,cur,True
     except:
         return False,False,False        
+    
+
+data , cur, _ = Mysql("localhost","root","Achintya2008","project")

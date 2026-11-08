@@ -7,6 +7,7 @@ class MainWindow():
         self.root.geometry("1280x720")
         self.root.config(background=fg)
         self.pages = {}
+        self.name = ""
         
             
     def add_page(self, name : str, page):
@@ -14,7 +15,6 @@ class MainWindow():
         self.pages[name] = page
 
     def show_page(self, name):
-        print(self.pages)
         for page in self.pages.values():
             page.forget()
 

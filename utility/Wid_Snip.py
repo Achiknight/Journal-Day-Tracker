@@ -1,4 +1,5 @@
-from Gui.GUI_Root import *
+from customtkinter import *
+from Backend.config import fg,txt,Ft1,Ft2,brd,hv
 
 def Button(master, **kwargs):
     k = CTkButton(master,

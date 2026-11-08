@@ -5,7 +5,7 @@ class Table():
         if not cur or not data:
             return
         try:
-            cur.execute(f"""CREATE TABLE journal_{name}
+            cur.execute(f"""CREATE TABLE IF NOT EXISTS journal_{name}
                     (Date DATE DEFAULT (CURRENT_DATE) Primary Key);""")
             data.commit()
             print("created")
@@ -17,165 +17,164 @@ class Table():
 
 class qurreys():
     def create_row_sleep(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "sleep" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `sleep` TEXT")
         data.commit()
 
     def create_row_steps(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "steps" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `steps` TEXT")
         data.commit()
 
     def create_row_water(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "water" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `water` TEXT")
         data.commit()
 
     def create_row_study(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "study" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `study` TEXT")
         data.commit()
 
     def create_row_coding(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "coding" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `coding` TEXT")
         data.commit()
 
     def create_row_gaming(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "gaming" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `gaming` TEXT")
         data.commit()
 
     def create_row_screen_time(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "screen_time" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `screen_time` TEXT")
         data.commit()
 
     def create_row_exercise(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "exercise" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `exercise` TEXT")
         data.commit()
 
     def create_row_caffeine(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "caffeine" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `caffeine` TEXT")
         data.commit()
 
     def create_row_spent_today(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "spent_today" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `spent_today` TEXT")
         data.commit()
 
     def create_row_mood(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "mood" INT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `mood` INT")
         data.commit()
 
     def create_row_energy(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "energy" INT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `energy` INT")
         data.commit()
 
     def create_row_stress(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "stress" INT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `stress` INT")
         data.commit()
 
     def create_row_productivity(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "productivity" INT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `productivity` INT")
         data.commit()
 
     def create_row_weather(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "weather" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `weather` TEXT")
         data.commit()
 
     def create_row_temperature(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "temperature" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `temperature` TEXT")
         data.commit()
 
     def create_row_classes_attended(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "classes_attended" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `classes_attended` TEXT")
         data.commit()
 
     def create_row_attendance(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "attendance" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `attendance` TEXT")
         data.commit()
 
     def create_row_assignments_completed(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "assignments_completed" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `assignments_completed` TEXT")
         data.commit()
 
     def create_row_new_people_met(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "new_people_met" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `new_people_met` TEXT")
         data.commit()
 
     def create_row_interesting_thing_learned(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "interesting_thing_learned" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `interesting_thing_learned` TEXT")
         data.commit()
 
     def create_row_best_moment(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "best_moment" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `best_moment` TEXT")
         data.commit()
 
     def create_row_most_chaotic_moment(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "most_chaotic_moment" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `most_chaotic_moment` TEXT")
         data.commit()
 
     def create_row_git_commits(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "git_commits" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `git_commits` TEXT")
         data.commit()
 
     def create_row_coding_time(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "coding_time" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `coding_time` TEXT")
         data.commit()
 
     def create_row_bugs_fixed(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "bugs_fixed" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `bugs_fixed` TEXT")
         data.commit()
 
     def create_row_features_added(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "features_added" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `features_added` TEXT")
         data.commit()
 
     def create_row_what_i_learned(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "what_i_learned" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `what_i_learned` TEXT")
         data.commit()
 
     def create_row_current_project(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "current_project" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `current_project` TEXT")
         data.commit()
 
     def create_row_music_listening(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "music_listening" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `music_listening` TEXT")
         data.commit()
 
     def create_row_current_song(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "current_song" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `current_song` TEXT")
         data.commit()
 
     def create_row_movies_episodes(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "movies_episodes" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `movies_episodes` TEXT")
         data.commit()
 
     def create_row_games_played(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "games_played" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `games_played` TEXT")
         data.commit()
 
     def create_row_gaming_time(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "gaming_time" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `gaming_time` TEXT")
         data.commit()
 
     def create_row_starting_balance(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "starting_balance" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `starting_balance` TEXT")
         data.commit()
 
     def create_row_spent(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "spent" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `spent` TEXT")
         data.commit()
 
     def create_row_food(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "food" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `food` TEXT")
         data.commit()
 
     def create_row_transport(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "transport" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `transport` TEXT")
         data.commit()
 
     def create_row_entertainment(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "entertainment" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `entertainment` TEXT")
         data.commit()
 
     def create_row_saved(cur, data, journal_name):
-        cur.execute(f'ALTER TABLE "journal_{journal_name}" ADD COLUMN "saved" TEXT')
+        cur.execute(f"ALTER TABLE `journal_{journal_name}` ADD COLUMN `saved` TEXT")
         data.commit()
-
 
     create_row_functions = {
         "Sleep": create_row_sleep,

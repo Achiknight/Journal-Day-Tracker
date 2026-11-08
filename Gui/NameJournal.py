@@ -1,6 +1,4 @@
 from utility.Wid_Snip import *
-from Backend.Backpage_ import cur,rev
-from Backend.Page_Wraper import wrappers
 from DBFile.Connection import data,cur
 from DBFile.table_maker import Table
  
@@ -49,4 +47,5 @@ class NewJournalP1(CTkFrame):
     def wrapper(self):
         self.app.show_page("New_page2")
         Table.create(self.JrName.get(),cur,data)
-        
+        self.app.name = self.JrName.get()
+    

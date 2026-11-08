@@ -24,7 +24,7 @@ class FrontPage(CTkFrame):
 
         self.Startbutt.configure(font=(Ft2,30),command=lambda:self.app.show_page("New_page1"))
         
-    #* #############################################################
+    #*#############################################################
     
     def place_(self):
         self.place(relx = 0,rely =0, relheight = 1, relwidth = 1)
