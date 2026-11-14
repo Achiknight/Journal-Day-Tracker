@@ -18,11 +18,18 @@ class FrontPage(CTkFrame):
         self.Startbutt = Button(self)
         self.Startbutt.configure(text="Create New Journal")
 
+        self.Loadbutt = Button(self)
+        self.Loadbutt.configure(text="Load existing journal")
 
         self.Startbutt.place(relx = 0.5,rely =0.4, relheight = 0.1, relwidth = 0.4,anchor="center")
         self.StartLabel.place(relx = 0.5,rely = 0.2, relheight = 0.4, relwidth = 0.6,anchor="center")
-
+        self.Loadbutt.place(relx = 0.5,rely = 0.6, relheight = 0.1, relwidth = 0.4,anchor="center")
+        
         self.Startbutt.configure(font=(Ft2,30),command=lambda:self.app.show_page("New_page1"))
+        self.Loadbutt.configure(font=(Ft2,30),command=lambda:self.app.show_page("load_page"))
+        
+        
+        
         
     #*#############################################################
     
